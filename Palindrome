@@ -1,0 +1,11 @@
+#palindrome
+text = input("Enter the input")
+
+rev = ""
+for i in text:
+    rev = i +rev
+
+if text == rev:
+    print('palindrome')
+else:
+    print("Not a palindrome")
