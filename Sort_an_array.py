@@ -1,4 +1,4 @@
-sort an array using bubble sort
+#sort an array using bubble sort
 arr = [5,2,9,1,5,6,10]
 
 n= len(arr)
