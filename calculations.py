@@ -1,17 +1,16 @@
-#Simple calculations
-num1 = int(input("Enter the first num"))
-num2 = int(input("Ente the second num"))
-operator = input("Enter the operator(+,-,*,/)")
+def calculations():
+#Enter the input eg: 1+2
+    exp = input("Enter the calculation: ")
+    for i in "+-*/":
+        if i in exp:
+            try:
+                num1,num2 = map(int,exp.split(i))
+                result = eval(f"{num1}{i}{num2}")
+                print(result)
+            except Exception:
+                print('Invalid input')
+            return
+    print("Invalid Operator, Please use one the operators: +-*/")
 
-if operator =="+":
-    result = num1 + num2
-elif operator == "-":
-    result = num1 - num2
-elif operator == "*":
-    result = num1 * num2
-elif operator == "/":
-    result = num1 / num2
-else:
-    result = "Invalid operator"
-
-print("Result", result)
+if __name__ =="__main__":
+    calculations()
