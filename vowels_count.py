@@ -1,9 +1,10 @@
-#Count of vowels
-vowels = "aeiouAEIOU"
+def vowels_count(s):
+    vowels= {'a','e','i','o','u'}
+    count=0
+    for i in s:
+        if i.lower() in vowels:
+            count += 1
+    return count
 
-name = input("Enter the string")
-count = 0
-for i in name:
-    if i in vowels:
-        count += 1
-print(count)
+name = input("Enter the string: ")
+print(vowels_count(name))
