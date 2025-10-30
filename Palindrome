@@ -1,11 +1,6 @@
-#palindrome
-text = input("Enter the input")
+text = input("Enter the input: ")
 
-rev = ""
-for i in text:
-    rev = i +rev
-
-if text == rev:
-    print('palindrome')
+if text == text[::-1]:
+    print("Palindrome")
 else:
     print("Not a palindrome")
